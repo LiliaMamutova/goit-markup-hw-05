@@ -472,7 +472,8 @@ footer {
     width: 264px;
 }
 
-.text-scl-links {
+.text-scl-links,
+.text-subscribe {
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -480,6 +481,7 @@ footer {
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+
 }
 
 .footer-list-social-links {
@@ -490,6 +492,23 @@ footer {
 .scl-link-footer:hover,
 .scl-link-footer:focus {
     background-color: #31D0AA;
+}
+
+.form {}
+
+.form-btn {
+    font-family: inherit;
+    background-color: rgba(77, 90, 229, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    padding: 8px 24px;
+    gap: 16px;
+}
+.icon-btn {
+    fill: #FFFFFF;
 }
 
 .visually-hidden {
