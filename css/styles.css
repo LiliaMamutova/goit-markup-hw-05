@@ -556,6 +556,93 @@ footer {
     fill: #FFFFFF;
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    background-color: rgba(46, 47, 66, 0.4);
+}
+.modal {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 4px;
+    width: 408px;
+    min-height: 584px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+}
+
+.modal-tittle {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    color: #2e2f42;
+    max-width: 360px;
+    margin-top: 72px;
+}
+
+.modal-box {
+    padding: 16px 24px;
+
+}
+
+.modal-field {
+
+}
+
+.modal-label {}
+
+.modal-input-wrapper{}
+
+.modal-input {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    color: rgba(77, 90, 229, 1);
+    padding-left: 38px;
+    padding-right: 16px;
+    outline: transparent;
+    /*position: absolute;*/
+
+    /*width: 100%;*/
+    /*height: 58px;*/
+}
+
+.modal-input-icon {
+    position: absolute;
+    fill: #2E2F42;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 16px;
+}
+
+.modal-text-area {
+    height: 120px;
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    color: rgba(77, 90, 229, 1);
+    resize: none;
+    padding: 8px 24px;
+
+}
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;
