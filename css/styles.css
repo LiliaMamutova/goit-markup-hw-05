@@ -454,6 +454,10 @@ footer {
     align-items: baseline;
 }
 
+.footer-subscribe {
+    margin-left: auto;
+}
+
 .logo-footer {
     color: #F4F4FD;
 }
@@ -469,7 +473,7 @@ footer {
 
 .footer-info {
     display: block;
-    width: 264px;
+    min-width: 264px;
 }
 
 .text-scl-links,
@@ -502,19 +506,13 @@ footer {
     max-width: 463px;
 }
 
-.form-label {
-    display: flex;
-    background-color: #2e2f42;
-    /*margin-top: 16px;*/
-    margin-right: 24px;
-}
-
 .form-input {
     font-family: inherit;
     font-size: 12px;
     line-height: 1.7;
     padding: 8px 16px;
     letter-spacing: 0.04em;
+    min-height: 40px;
 
     background-color: #2e2f42;
     color: #FFFFFF;
@@ -525,6 +523,12 @@ footer {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-label {
+    display: flex;
+    background-color: #2e2f42;
+    /*margin-top: 16px;*/
+    margin-right: 24px;
+}
 
 .form-input::placeholder {
     color: #ffffff;
@@ -629,8 +633,6 @@ footer {
 }
 
 .icon-btn-close {
-    width: 8px;
-    height: 8px;
     fill: #2E2F42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -639,7 +641,6 @@ footer {
 .modal-close:focus .icon-btn-close {
     fill: #ffffff;
 }
-
 
 .modal-tittle {
     font-family: inherit;
@@ -729,16 +730,10 @@ footer {
     margin-right: 8px;
 }
 
-label {
+.modal-check-label {
     font-family: inherit;
     font-weight: 400;
-    font-size: 12px;
     line-height: 1.1;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-}
-
-.modal-check-label {
     font-size: 12px;
     letter-spacing: 0.04em;
     color: #8e8f99;
@@ -761,11 +756,18 @@ label {
 .checkbox:checked +.modal-check-label span {
     background-color: #4d5ae5;
     border: none;
-    fill: #fff;
-
+    /*fill: #fff;*/
 }
 
-.modal-check-icon {}
+.checkbox:checked + .modal-check-label span .custom-checkbox-icon {
+    opacity: 1;
+}
+
+.custom-checkbox-icon {
+    fill: #ffffff;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal-check-label span {
     border-radius: 2px;
