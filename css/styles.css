@@ -36,14 +36,12 @@ body {
 }
 
 .page-nav {
-    padding-right: 332px;
+    margin-right: 332px;
 }
 
 .link {
     position: relative;
     display: block;
-
-
 }
 
 .link,
@@ -186,6 +184,7 @@ img {
     color: #FFFFFF;
     background-color: #4D5AE5;
     cursor: pointer;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -236,7 +235,6 @@ h1 {
     display: block;
     margin-right: 24px;
     flex: 0 0 calc((100% - 72px) / 4);
-
 }
 
 .card-icon {
@@ -252,7 +250,7 @@ h1 {
 }
 
 .icon {
-    margin: 24px 100px;
+    /*margin: 24px 100px;*/
 }
 
 .card-text:last-child {
@@ -450,7 +448,6 @@ footer {
 
 .footer-container {
     display: flex;
-    gap: 120px;
     align-items: baseline;
 }
 
@@ -474,6 +471,11 @@ footer {
 .footer-info {
     display: block;
     min-width: 264px;
+    margin-right: 120px;
+}
+
+.scl-media-bloc {
+    margin-right: 80px;
 }
 
 .text-scl-links,
@@ -498,8 +500,6 @@ footer {
     background-color: #31D0AA;
 }
 
-.text-subscribe {}
-
 .form {
     display: flex;
     flex-direction: row;
@@ -510,10 +510,11 @@ footer {
 .form-input {
     font-family: inherit;
     font-size: 12px;
-    line-height: 1.7;
+    line-height: 2px;
     padding: 8px 16px;
     letter-spacing: 0.04em;
     min-height: 40px;
+    outline: none;
 
     background-color: #2e2f42;
     color: #FFFFFF;
@@ -549,6 +550,7 @@ footer {
     padding: 8px 24px;
     gap: 16px;
     cursor: pointer;
+    border: unset;
 
     border-radius: 4px;
     max-width: 165px;
@@ -603,7 +605,7 @@ footer {
     padding: 72px 24px 24px;
 }
 
-.modal-close {
+.modal-btn-close {
     border-radius: 50%;
     background-color: rgba(231, 233, 252, 1);
     padding: 0;
@@ -616,16 +618,18 @@ footer {
     width: 24px;
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
     transition:
             background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
             border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover,
-.modal-close:focus {
-    background-color: #4d5ae5;
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+    background-color: #404BBF;
     border: none;
+
 }
 
 .icon-btn-close {
@@ -633,8 +637,8 @@ footer {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover .icon-btn-close,
-.modal-close:focus .icon-btn-close {
+.modal-btn-close:hover .icon-btn-close,
+.modal-btn-close:focus .icon-btn-close {
     fill: #ffffff;
 }
 
@@ -651,19 +655,30 @@ footer {
     margin-bottom: 16px;
 }
 
-.modal-form {
-    /*padding: 0 24px;*/
-}
+.modal-form {}
 
 
 .modal-field {
     margin-bottom: 8px;
 }
 
+.modal-field-comment {
+    margin-bottom: 16px;
+}
+
+
 .modal-label {
     display: block;
-    font-size: 12px;
     margin-bottom: 4px;
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    color: #8e8f99;
+
 }
 
 .modal-input-wrapper{
@@ -685,6 +700,7 @@ footer {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input-icon {
@@ -714,7 +730,7 @@ footer {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #2E2F42;
+    color: rgba(46, 47, 66, 0.4);
 
     resize: none;
     outline: none;
@@ -723,6 +739,7 @@ footer {
 }
 
 .modal-text-area::placeholder {
+    color: rgba(46, 47, 66, 0.4);
     opacity: 0.5;
 }
 
@@ -769,8 +786,9 @@ footer {
 }
 
 .checkbox:checked +.modal-check-label span {
-    background-color: #4d5ae5;
+    background-color: #404BBF;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .modal-check-label span .custom-checkbox-icon {
@@ -789,10 +807,16 @@ footer {
     width: 16px;
     height: 16px;
     margin-right: 8px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     fill: transparent;
+    background-color: transparent;
+    transition:
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-box {
@@ -823,7 +847,7 @@ footer {
 
 .btn-send:hover,
 .btn-send:focus {
-    background-color: #404bbf;
+    background-color: #404BBF;
 }
 
 .visually-hidden {
