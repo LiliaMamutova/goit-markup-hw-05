@@ -510,7 +510,7 @@ footer {
 .form-input {
     font-family: inherit;
     font-size: 12px;
-    line-height: 2px;
+    line-height: 2;
     padding: 8px 16px;
     letter-spacing: 0.04em;
     min-height: 40px;
